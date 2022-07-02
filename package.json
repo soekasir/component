@@ -1,0 +1,17 @@
+{
+  "name": "components",
+  "version": "1.0.0",
+  "description": "html component, think like reactJs",
+  "main": "index.js",
+  "directories": {
+    "test": "test",
+    "src":"src"
+  },
+  "scripts": {},
+  "keywords": [
+    "html",
+    "reactjs"
+  ],
+  "author": "soekasir",
+  "license": "ISC"
+}
