@@ -1,5 +1,5 @@
 {
-  "name": "components",
+  "name": "components-html",
   "version": "1.0.0",
   "description": "html component, think like reactJs",
   "main": "index.js",
