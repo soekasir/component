@@ -1,14 +1,6 @@
-# Components-Html
-bring react into html as components
-
-## Documentation
-
-to use components-html, copy this into your html file.
-
-``<script src="https://unpkg.com/components-html@1.0.3/dist/component.min.js"></script>``
-
 
 ## Usage/Examples
+see example html code [here](https://github.com/soekasir/components-html/blob/main/dist/component.html)
 
 let say we have html like this
 ```html
