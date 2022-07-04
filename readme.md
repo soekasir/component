@@ -24,7 +24,7 @@ let say we have html like this
 
 and components to fill it:
 ```javascript
-//context that we need to use globally cross component
+//context that we need to use globally across component
 const [getColor,setColor,useColor]=Component.createContext('red');
 
 
@@ -35,7 +35,6 @@ class Test extends Component{
     this.state={
       say:'hy, click to change color!'
     };
-    // bcs we will use getColor, so lets useColor
     // by calling this function, we tell components to re-render if color context been changed
     useColor(this);
   }
