@@ -1,10 +1,11 @@
 {
   "name": "components-html",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "html component, think like reactJs",
-  "main": "build/src/index.js",
+  "main": "dist/component.js",
   "directories": {
-    "build": "build"
+    "build": "build",
+    "dist": "dist"
   },
   "scripts": {
     "lint": "gts lint",

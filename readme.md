@@ -1,23 +1,32 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="https://unpkg.com/components-html@1.0.3/dist/component.min.js"></script>
-    <!-- <script src="component.js"></script> -->
-    <title>Test Component</title>
-  </head>
-  <body>
+# Components-Html
+bring react into html as components
+
+## Documentation
+
+to use components-html, copy this into your html file.
+
+``<script src="https://unpkg.com/components-html@1.0.3/dist/component.min.js"></script>``
+
+
+## Usage/Examples
+
+let say we have html like this
+```html
+    <!-- component Test -->
     <div component="Test"></div>
     <br/>
+    <!-- component InputColor, here we use component byId -->
     <div id="InputColor"></div>
     <br>
+    <!-- component Test2 with props log -->
     <div component="Test2" props-log="apa yah?"></div>
-    <br/>
-  </body>
+```
 
-<script>
+and components to fill it:
+```javascript
+//context that we need to use globally cross component
 const [getColor,setColor,useColor]=Component.createContext('red');
+
 
 class Test extends Component{
 
@@ -26,6 +35,8 @@ class Test extends Component{
     this.state={
       say:'hy, click to change color!'
     };
+    // bcs we will use getColor, so lets useColor
+    // by calling this function, we tell components to re-render if color context been changed
     useColor(this);
   }
 
@@ -51,6 +62,8 @@ class InputColor extends Component{
   }
 
   handleChange(e){
+      //bcs we only set the color, and this component dont need to re-render,
+      //so we not need to use function useColor in constructor 
     setColor(e.value)
   }
   
@@ -60,7 +73,6 @@ class InputColor extends Component{
     `)
   }
 }
-new InputColor("InputColor");
 
 class Test2 extends Component{
 
@@ -91,9 +103,10 @@ class Test2 extends Component{
   }
 }
 
+//invoke component by their attribute id
+new InputColor("InputColor");
+//invoke component that use html attribute component
 Component.run();
-</script>
+```
 
-
-  </body>
-</html>
+and that it, just like we use reactJs but with html instead of jsx
