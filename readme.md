@@ -108,4 +108,4 @@ new InputColor("InputColor");
 Component.run();
 ```
 
-and that it, just like we use reactJs but with html instead of jsx
+and that it, just like we use reactJs but with html instead of jsx. see the result [here](https://unpkg.com/components-html@1.0.4/dist/component.html)
